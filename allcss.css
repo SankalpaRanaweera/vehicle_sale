@@ -63,5 +63,12 @@ ul {
     font-size: 50px;
 }
 
+.splogin{
+        text-align: center;
+        color: black;
+        font-size: 30px;
+    }
 
-
+.bdlogin{
+    background-color: aquamarine;
+}
