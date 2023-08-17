@@ -9,12 +9,19 @@ include('./navbar.php');
     <title>Document</title>
 </head>
 <body>
+    <div>
     <form action="script.php" method="post">
         <lable> Name </lable>
-        <input type ="text" value="name"> 
+        <input type ="text" name="name"> 
         <lable> Password </lable>
-        <input type ="password" value="password">  
+        <input type ="password" name="password">  
+</form>
+</div>
+
+        <a href ="addnew.php"><button> Login </button> </a>
 
 </body>
 </html>
+
+
 
