@@ -8,8 +8,8 @@
     <link href="allcss.css" rel="stylesheet" type="text/css"/>
 </head>
 <body class ="bd" bgcolor ="gray"> 
-    <div class ="h">
-    <h1> Find & Sell Your Vehicle </h1>
+    <div class ="s">
+    <strong> Find & Sell Your Vehicle </strong>
 </div>
     <div>
         <img src ="1657001756668.jpg" class="img1">

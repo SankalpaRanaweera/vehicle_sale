@@ -1,28 +1,38 @@
+<?php include('./navbar.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="allcss.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <h1> Sing Up </h1>
-<div>
+<body bgcolor="gray">
+    <div class ="div1singup">
+    <span> Sing Up </span>
+</div>
+<div class="div2singup">
     <from action="script.php" method="post">
         <lable> Name </lable>
-        <input type="text" name="name">
+        <input type="text" name="name" class="tx1singup"><br>
         <lable> Password</lable>
-        <input type="password" name="password">
+        <input type="password" name="password" class="tx2singup"><br>
         <lable>Re Enter Password</lable>
-        <input type="password" name="password">
-        <lable>Telephone</lable>
-        <input type="text" name="telephone">
+        <input type="password" name=" Re Enterpassword" class="tx3singup"><br>
+        <lable>NIC</lable>
+        <input type="text" name="nic" class="tx4singup"><br>
         <lable>City</lable>
-        <input type="text" name="city">;
+        <input type="text" name="city" class="tx5singup">
 </form>
 </div>
-        <a href ="addnew.php"><button> Register </button> </a>
-
-
+<div class="divbusingup">
+        <a href ="addnew.php"><button class="busingup" onclick="second()"> Register </button> </a>
+</div>
+<script>
+    function second(){
+        alert(" Registration succesfull! Now you can add your vehicle details")
+    }
+        </script>
+    
 </body>
 </html>
