@@ -17,8 +17,8 @@
         <input type="text" name="name" class="tx1singup"><br>
         <lable> Password</lable>
         <input type="password" name="password" class="tx2singup"><br>
-        <lable>Re Enter Password</lable>
-        <input type="password" name=" Re Enterpassword" class="tx3singup"><br>
+        <lable>Telephone</lable>
+        <input type="text" name="telephone" class="tx3singup"><br>
         <lable>NIC</lable>
         <input type="text" name="nic" class="tx4singup"><br>
         <lable>City</lable>

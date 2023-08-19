@@ -13,6 +13,13 @@
 </div>
 <div class="div2addnew">
     <form action="script.php" method="post">
+        <?php
+        $nic=$_GET['NIC'];
+        $sql="SELECT * FROM vehicle_details WHERE $nic='nic'";
+        $res = mysqli_query ($con,$sql);
+        if(mysqlo_num_rows($res)>0){
+            $row=mysqli_fetch_assoc($res);
+            ?>
         <lable> Contact</lable>
         <input type="text" name="contact" class="tx0addnew"><br>
         <lable> Price</lable>
@@ -32,6 +39,9 @@
         <div class="divbuaddnew">
         <input type="submit" name="upload" class="buaddnew">
     </div>
+    <?php
+        }
+        ?>
 </form>
 </div>
     
