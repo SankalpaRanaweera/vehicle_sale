@@ -23,11 +23,11 @@
         <input type="text" name="nic" class="tx4singup"><br>
         <lable>City</lable>
         <input type="text" name="city" class="tx5singup">
-</form>
 </div>
 <div class="divbusingup">
-        <a href ="addnew.php"><button class="busingup" onclick="second()"> Register </button> </a>
+        <a href ="addnew.php"><input type="submit" name="singup" value="Register" onclick="second()" class="busingup"> </a>
 </div>
+</form>
 <script>
     function second(){
         alert(" Registration succesfull! Now you can add your vehicle details")

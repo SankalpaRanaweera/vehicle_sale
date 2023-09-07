@@ -20,15 +20,14 @@
         <input type ="password" name="password" class="tx2login"> <br>
         <lable>NIC</lable>
         <input type ="text" name="nic" class="tx3login">   
-</form>
 </div>
 <div class="divbu1login">
-        <a href ="addnew.php" ><button class="bu1login" onclick="first1()"> Add </button> </a>
+        <a href ="addnew.php" ><input type="submit" name="log" value="Add" onclick="first2()" class="bu1login"> </a>
 </div>
 <div class="divbu2login">
-        <a href ="update.php" ><button class="bu2login" onclick="first2()"> Update </button> </a>
+        <a href ="update.php" ><input type="submit" name="log" value="Update" onclick="first1()" class="bu2login"> </a>
 </div>
-
+</form>
 <script>
     function first1(){
         alert("login succesfull! add your vehicle details");

@@ -19,25 +19,7 @@ if(isset ($_POST['login'])){
     }
 }
 
-if(isset ($_POST['Singup'])){
-    $n = mysqli_real_escape_string ($con,$_POST['Name']);
-    $pw = mysqli_real_escape_string ($con,$_POST['Password']);
-    $tel = mysqli_real_escape_string ($con,$_POST['Telephone']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
-    $city = mysqli_real_escape_string ($con,$_POST['City']);
 
-    $sql = "INSERT INTO user (Name,Password,Telephone,NIC,City) VALUES ('$n',$pw','$tel','$nic','$city')";
-    $res = mysqli_query ($con,$sql);
-    
-    if(mysqli_num_rows ($res)>0){
-
-        $_session ['user']=$un;
-        header ('location:home.php');
-    }
-    else{
-        echo "failed to add user";
-    }
-}
 
 if(isset ($_POST['addnew'])){
     $con = mysqli_real_escape_string ($con,$_POST['Contact']);
@@ -84,7 +66,49 @@ if(isset ($_POST['Update'])){
         echo "failed to update vehicle details";
     }
 }
+
+if(isset ($_POST['log'])){
+    $n = mysqli_real_escape_string ($con,$_POST['Name']);
+    $pw = mysqli_real_escape_string ($con,$_POST['Password']);
+    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
+   
+
+    $sql = "INSERT INTO user (Name,Password,NIC) VALUES ('$n','$pw','$nic')";
+    $res = mysqli_query ($con,$sql);
+    
+    if(mysqli_num_rows ($res)>0){
+
+        $_session ['user']=$un;
+        header ('location:home.php');
+    }
+    else{
+        echo "failed to login";
+    }
+}
+if(isset ($_POST['singup'])){
+    $nm = mysqli_real_escape_string ($con,$_POST['Name']);
+    $psw = mysqli_real_escape_string ($con,$_POST['Password']);
+    $tel = mysqli_real_escape_string ($con,$_POST['Telephone']);
+    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
+    $c = mysqli_real_escape_string ($con,$_POST['City']);
+
+    $sql = "INSERT INTO user (Name,Password, Telephone,NIC) VALUES ('$n','$pw','$tel','$nic','$c')";
+    $res = mysqli_query ($con,$sql);
+    
+    if(mysqli_num_rows ($res)>0){
+
+        $_session ['user']=$un;
+        header ('location:home.php');
+    }
+    else{
+        echo "failed to singup";
+    }
+}
 ?>
+
+
+
+
 
 
 

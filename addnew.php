@@ -30,7 +30,7 @@
         <lable>Add Image</lable>
         <input type="file" name="image" class="tx6addnew">
         <div class="divbuaddnew">
-        <input type="submit" name="upload" class="buaddnew">
+        <a href= "home.php"><input type="submit" name="addnew"  value="Submit" class="buaddnew"></a>
     </div>
 </form>
 </div>
