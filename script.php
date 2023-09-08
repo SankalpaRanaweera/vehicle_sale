@@ -1,37 +1,36 @@
 <?php
 include('./dbconnection.php');
 session_start();
-if(isset ($_POST['login'])){
-    $n = mysqli_real_escape_string ($con,$_POST['Name']);
-    $pw = mysqli_real_escape_string ($con,$_POST['Password']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
+if(isset ($_POST['log'])){
+    $n = mysqli_real_escape_string ($con,$_POST['name']);
+    $pw = mysqli_real_escape_string ($con,$_POST['password']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+   
 
-    $sql = "SELECT * FROM user WHERE username='$n' AND password='$pw' AND nic='$nic'";
+    $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
 
-        $_session ['user']=$n;
+        $_session ['user']=$un;
         header ('location:home.php');
     }
     else{
-        echo "failed to loging";
+        echo "failed to login";
     }
 }
 
-
-
 if(isset ($_POST['addnew'])){
-    $con = mysqli_real_escape_string ($con,$_POST['Contact']);
-    $pri = mysqli_real_escape_string ($con,$_POST['Price']);
-    $loca = mysqli_real_escape_string ($con,$_POST['Location']);
-    $yom = mysqli_real_escape_string ($con,$_POST['YOM']);
-    $name = mysqli_real_escape_string ($con,$_POST['Name']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
-    $mila = mysqli_real_escape_string ($con,$_POST['Milage']);
-    $addima = mysqli_real_escape_string ($con,$_POST['AddImage']);
+    $con = mysqli_real_escape_string ($con,$_POST['contact']);
+    $pri = mysqli_real_escape_string ($con,$_POST['price']);
+    $loca = mysqli_real_escape_string ($con,$_POST['location']);
+    $yom = mysqli_real_escape_string ($con,$_POST['type']);
+    $name = mysqli_real_escape_string ($con,$_POST['name']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+    $mila = mysqli_real_escape_string ($con,$_POST['milage']);
+    $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
-    $sql = "INSERT INTO vehicle_details (Contact,Price,Location,YOM,Name,NIC,Milage,AddImage) VALUES ('$con',$pri','$loca','$yom','$name','$nic','$mila','$addima')";
+    $sql = "INSERT INTO vehicle_details (contact,price,location,type,name,nic,milage,image) VALUES ('$con',$pri','$loca','$yom','$name','$nic','$mila','$addima')";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
@@ -42,19 +41,20 @@ if(isset ($_POST['addnew'])){
     else{
         echo "failed to add vehicle details";
     }
+    header("Location: ./home.php");
 }
 
-if(isset ($_POST['Update'])){
-    $con = mysqli_real_escape_string ($con,$_POST['Contact']);
-    $pri = mysqli_real_escape_string ($con,$_POST['Price']);
-    $loca = mysqli_real_escape_string ($con,$_POST['Location']);
-    $yom = mysqli_real_escape_string ($con,$_POST['YOM']);
-    $name = mysqli_real_escape_string ($con,$_POST['Name']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
-    $mila = mysqli_real_escape_string ($con,$_POST['Milage']);
-    $addima = mysqli_real_escape_string ($con,$_POST['AddImage']);
+if(isset ($_POST['upload'])){
+    $connection = mysqli_real_escape_string ($con,$_POST['contact']);
+    $pri = mysqli_real_escape_string ($con,$_POST['price']);
+    $loca = mysqli_real_escape_string ($con,$_POST['location']);
+    $yom = mysqli_real_escape_string ($con,$_POST['type']);
+    $name = mysqli_real_escape_string ($con,$_POST['name']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+    $mila = mysqli_real_escape_string ($con,$_POST['milage']);
+    $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
-    $sql = "UPDATE vehicle_details SET (Contact ='$con',Price ='$pri',Location ='$loca',YOM ='$yom',Name ='$name',NIC ='$nic',Milage ='$mila',AddImage ='$addima'";
+    $sql = "UPDATE vehicle_details SET (contact ='$con',price ='$pri',location ='$loca',type ='$yom',name ='$name',nic ='$nic',milage ='$mila',image ='$addima'";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
@@ -67,32 +67,15 @@ if(isset ($_POST['Update'])){
     }
 }
 
-if(isset ($_POST['log'])){
-    $n = mysqli_real_escape_string ($con,$_POST['Name']);
-    $pw = mysqli_real_escape_string ($con,$_POST['Password']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
-   
 
-    $sql = "INSERT INTO user (Name,Password,NIC) VALUES ('$n','$pw','$nic')";
-    $res = mysqli_query ($con,$sql);
-    
-    if(mysqli_num_rows ($res)>0){
-
-        $_session ['user']=$un;
-        header ('location:home.php');
-    }
-    else{
-        echo "failed to login";
-    }
-}
 if(isset ($_POST['singup'])){
-    $nm = mysqli_real_escape_string ($con,$_POST['Name']);
-    $psw = mysqli_real_escape_string ($con,$_POST['Password']);
-    $tel = mysqli_real_escape_string ($con,$_POST['Telephone']);
-    $nic = mysqli_real_escape_string ($con,$_POST['NIC']);
-    $c = mysqli_real_escape_string ($con,$_POST['City']);
+    $nm = mysqli_real_escape_string ($con,$_POST['name']);
+    $psw = mysqli_real_escape_string ($con,$_POST['password']);
+    $tel = mysqli_real_escape_string ($con,$_POST['telephone']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+    $c = mysqli_real_escape_string ($con,$_POST['city']);
 
-    $sql = "INSERT INTO user (Name,Password, Telephone,NIC) VALUES ('$n','$pw','$tel','$nic','$c')";
+    $sql = "INSERT INTO user (name,password, telephone,nic) VALUES ('$n','$pw','$tel','$nic','$c')";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
@@ -103,6 +86,7 @@ if(isset ($_POST['singup'])){
     else{
         echo "failed to singup";
     }
+    header("Location: ./home.php");
 }
 ?>
 

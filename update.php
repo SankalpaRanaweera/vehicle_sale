@@ -26,8 +26,8 @@
         <input type="text" name="price" class="tx1addnew"><br>
         <lable> Location</lable>
         <input type="text" name="location" class="tx2addnew"><br>
-        <lable>YOM</lable>
-        <input type="text" name="yom" class="tx3addnew"><br>
+        <lable>Type</lable>
+        <input type="text" name="type" class="tx3addnew"><br>
         <lable>Name</lable>
         <input type="text" name="name" class="tx4addnew"><br>
         <lable>NIC</lable>
