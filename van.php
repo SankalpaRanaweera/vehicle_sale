@@ -23,11 +23,7 @@
         echo<div> <span> Type</span><strong> : </strong> "<span>".$span['type']."</span>";</div>
         echo<div><span> Name </span><strong> : </strong>"<span>".$span['name']."</span>";</div>
         echo<div><span> Milage </span><strong> : </strong>"<span>".$span['milage']."</span>";</div>
-    </div> }}?></div>
-</div>
-  
-             
-    
-              
+    </div> </div> }}?>
+</div>            
 </body>
 </html>

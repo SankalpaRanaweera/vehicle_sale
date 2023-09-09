@@ -9,19 +9,21 @@
 </head>
 <body bgcolor="gray">
 <div class="divfirst" >
-    <div class="div1moter">
+<div class="div1moter">
+        <?php
+        $sql= "SELECT from * vehicle_details";
+        $res = mysqli_query($con,$sql);
+        if(mysqli_num_rows($res)>0){
+            while($span=mysqli_fetch_assoc($res)){
         <div class="diva">
         <div> <img src="a.png " alter="a" class="img" > </div>
-       <div> <span> Contact </span> <strong> : </strong><span> 0771234567</span></div>
-       <div> <span> Price</span><strong> : </strong><span> 0771234567</span></div>
-       <div> <span> Location </span><strong> : </strong><span> 0771234567</span></div>
-       <div> <span> Type </span><strong> : </strong><span> 0771234567</span></div>
-       <div><span> Name </span><strong> : </strong><span> 0771234567</span></div>
-       <div><span> Milage </span><strong> : </strong><span> 0771234567</span></div>
-    </div> </div>
-  
-             
-   
-              
+        echo <div> <span> Contact </span> <strong> : </strong> "<span>".$span['contact']. "</span>";</div>
+        echo<div> <span> Price</span><strong> : </strong> "<span>".$span['price']. "</span>";</div>
+        echo<div> <span> Location </span><strong> : </strong>"<span>".$span['location']."</span>";</div>
+        echo<div> <span> Type</span><strong> : </strong> "<span>".$span['type']."</span>";</div>
+        echo<div><span> Name </span><strong> : </strong>"<span>".$span['name']."</span>";</div>
+        echo<div><span> Milage </span><strong> : </strong>"<span>".$span['milage']."</span>";</div>
+    </div> </div> }}?>
+</div>              
 </body>
 </html>
