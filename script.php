@@ -21,7 +21,7 @@ if(isset ($_POST['log'])){
 }
 
 if(isset ($_POST['addnew'])){
-    $con = mysqli_real_escape_string ($con,$_POST['contact']);
+    $co = mysqli_real_escape_string ($con,$_POST['contact']);
     $pri = mysqli_real_escape_string ($con,$_POST['price']);
     $loca = mysqli_real_escape_string ($con,$_POST['location']);
     $yom = mysqli_real_escape_string ($con,$_POST['type']);
@@ -30,7 +30,7 @@ if(isset ($_POST['addnew'])){
     $mila = mysqli_real_escape_string ($con,$_POST['milage']);
     $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
-    $sql = "INSERT INTO vehicle_details (contact,price,location,type,name,nic,milage,image) VALUES ('$con',$pri','$loca','$yom','$name','$nic','$mila','$addima')";
+    $sql = "INSERT INTO vehicle_details (contact,price,location,type,name,nic,milage,image) VALUES ('$co',$pri','$loca','$yom','$name','$nic','$mila','$addima')";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
@@ -41,11 +41,11 @@ if(isset ($_POST['addnew'])){
     else{
         echo "failed to add vehicle details";
     }
-    header("Location: ./home.php");
+    
 }
 
 if(isset ($_POST['upload'])){
-    $connection = mysqli_real_escape_string ($con,$_POST['contact']);
+    $co = mysqli_real_escape_string ($con,$_POST['contact']);
     $pri = mysqli_real_escape_string ($con,$_POST['price']);
     $loca = mysqli_real_escape_string ($con,$_POST['location']);
     $yom = mysqli_real_escape_string ($con,$_POST['type']);
@@ -54,7 +54,7 @@ if(isset ($_POST['upload'])){
     $mila = mysqli_real_escape_string ($con,$_POST['milage']);
     $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
-    $sql = "UPDATE vehicle_details SET (contact ='$con',price ='$pri',location ='$loca',type ='$yom',name ='$name',nic ='$nic',milage ='$mila',image ='$addima'";
+    $sql = "UPDATE vehicle_details SET (contact ='$co',price ='$pri',location ='$loca',type ='$yom',name ='$name',nic ='$nic',milage ='$mila',image ='$addima'";
     $res = mysqli_query ($con,$sql);
     
     if(mysqli_num_rows ($res)>0){
