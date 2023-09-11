@@ -2,6 +2,7 @@
 include('./dbconnection.php');
 session_start();
 if(isset ($_POST['log'])){
+    
     $n = mysqli_real_escape_string ($con,$_POST['name']);
     $pw = mysqli_real_escape_string ($con,$_POST['password']);
     $nic = mysqli_real_escape_string ($con,$_POST['nic']);
@@ -86,7 +87,7 @@ if(isset ($_POST['singup'])){
     else{
         echo "failed to singup";
     }
-    header("Location: ./home.php");
+    
 }
 ?>
 
