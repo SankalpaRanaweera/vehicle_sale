@@ -12,7 +12,7 @@
     <strong> Find & Sell Your Vehicle </strong>
 </div>
     <div>
-        <img src ="1657001756668.jpg" class="img1">
+        <img src ="60cce45fb495d.jpeg" class="img1">
 </div>
     <a href ="car.php"> <button class ="b1">CAR </button> </a>
     <a href="bus.php"> <button class ="b1">BUS </button> </a>

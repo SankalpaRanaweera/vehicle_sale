@@ -3,7 +3,7 @@
 .s{
     width :100%;
     height :5%;
-    background-color: aqua;
+    background:transparent;
     font-size: 100px;
     margin:0;
     text-align: center;
@@ -11,13 +11,14 @@
 
 .img1 {
     width:100%;
-    height:450px;
+    height:60%;
     padding: 0;
     margin-top:-10;
     
 }
 .bd {
     margin:0;
+ 
 }
 .hed {
 
