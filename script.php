@@ -36,7 +36,7 @@ if(isset ($_POST['addnew'])){
     
     if(mysqli_num_rows ($res)>0){
 
-        $_session ['user']=$un;
+        $_session ['user']=$nic;
         header ('location:home.php');
     }
     else{
