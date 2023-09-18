@@ -17,8 +17,10 @@ session_start();
                 <ul>
                 <li> <a href ="home.php"> <button class="b2"> Home </button> </a> </li>
                 <li> <a href ="about.php"> <button class ="b2"> About </button> </a> </li>
+                <li> <a href ="you.php"> <button class ="b2"> You </button> </a> </li>
                 <li> <a href ="login.php"> <button class ="b2"> Login </button> </a> </li>
                 <li> <a href ="singup.php"> <button class ="b2"> Singup </button> </a> </li>
+               
 </ul>
 </div>
 </nav>
