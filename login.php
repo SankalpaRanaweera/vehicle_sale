@@ -21,6 +21,7 @@
         <lable>NIC</lable>
         <input type ="text" name="nic" class="tx3login">   
 </div>
+
 <div class="divbu1login">
         <a href ="addnew.php" ><input type="submit" name="log" value="Add" onclick="first2()" class="bu1login"> </a>
 </div>
@@ -28,6 +29,11 @@
         <a href ="update.php" ><input type="submit" name="log" value="Update" onclick="first1()" class="bu2login"> </a>
 </div>
 </form>
+<div class="divbu2login">
+        <a href ="update.php" ><input type="submit" name="you" value="You" class="bu2login"> </a>
+</div>
+
+
 <script>
     function first1(){
         alert("login succesfull! add your vehicle details");

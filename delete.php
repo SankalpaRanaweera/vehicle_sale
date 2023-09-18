@@ -1,6 +1,6 @@
 <?php
 include('./dbconnection.php');
-$nic=$_GET['NIC'];
+$user=$_GET['user'];
 $sql = "DELETE FROM vehicle_details WHERE NIC='$nic'";
 $res = mysqli_query($con,$sql);
 if($res) {

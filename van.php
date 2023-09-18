@@ -1,6 +1,5 @@
 <?php include('./navbar.php');
-session_start();
-$user=$_SESSION['user'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +13,7 @@ $user=$_SESSION['user'];
 <div class="divfirst" >
     <div class="div1moter">
         <?php
-        $sql= "SELECT * from vehicle_details where type='van' and nic=`$user`";
+        $sql= "SELECT * from vehicle_details where type='van'";
         $res = mysqli_query($con,$sql);
         if(mysqli_num_rows($res)>0){
             while($span=mysqli_fetch_assoc($res)){
@@ -27,6 +26,7 @@ $user=$_SESSION['user'];
         echo "<div><span> Name </span><strong> : </strong>'<span>'".$span['name']."'</span>';</div>";
         echo "<div><span> Milage </span><strong> : </strong>'<span>'".$span['milage']."'</span>';</div>";
    echo" </div> </div>";
+   echo"<input type='reset' name='delete' value='Delete'>";
     }}?>
 </div>            
 </body>

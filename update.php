@@ -1,4 +1,7 @@
-<?php include('./navbar.php');?>
+<?php include('./navbar.php');
+
+   $user =$_GET['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +17,11 @@
 <div class="div2addnew">
     <form action="script.php" method="post">
         <?php
-        $nic =$_GET['NIC'];
-        $sql="SELECT * FROM vehicle_details WHERE $nic='nic' ";
+        
+       
+        $sql="SELECT * FROM vehicle_details WHERE nic='$user' ";
         $res = mysqli_query ($con,$sql);
-        if(mysqlo_num_rows($res)>0){
+        if(mysqli_num_rows($res)>0){
             $row=mysqli_fetch_assoc($res);
             ?>
         <lable> Contact</lable>

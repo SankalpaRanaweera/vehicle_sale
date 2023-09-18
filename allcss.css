@@ -48,7 +48,7 @@ li {
     display:inline;
     font-size: 30px;
     color: black;
-    margin-right: 500px;
+    margin-left: 30px;
   
     
 }
@@ -59,13 +59,14 @@ ul {
 }
 .b2{
     background-color: blue;
-    font-size: 50px;
-    margin-right: 100px;
+    font-size: 30px;
+    margin-right: 30px;
     
 }
 
 .span {
     font-size: 50px;
+    margin-right: 700px;
 }
 
  .logindiv1{
@@ -79,7 +80,7 @@ ul {
     text-align: center;
     font-size: 50px;
     color:black;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 .bu1login{
     font-size: 40px;
@@ -93,11 +94,11 @@ ul {
 }
 .divbu1login{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .divbu2login{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .tx1login{
     width:300px;
@@ -230,19 +231,21 @@ ul {
     margin-top: 10px;
 }
 .div1moter{
-    display: inline-block;
+    display:inline-block;
+    
     font-size: 25px;
 }
 .div2moter{
-    display: inline-block;
+   
     font-size: 25px;
 }
 .divsecond{
     margin-top: 50px;
 }
 .divfirst{
+    display: flex;
 
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .diva{
     margin-left: 40px;
@@ -289,7 +292,13 @@ img{
 .div4abou{
     font-size: 50px;
 }
+.delete{
+    background-color: aqua;
+    width: 70px;
+    height: 40px;
 
+    
+}
 
 
 
