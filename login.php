@@ -19,7 +19,11 @@
         <lable> Password </lable>
         <input type ="password" name="password" class="tx2login"> <br>
         <lable>NIC</lable>
-        <input type ="text" name="nic" class="tx3login">   
+        <input type ="text" name="nic" class="tx3login">  
+        <?
+        session_start();
+    $_SESSION['user']= nic; 
+    ?>
 </div>
 
 <div class="divbu1login">
@@ -30,7 +34,7 @@
 </div>
 </form>
 <div class="divbu2login">
-        <a href ="update.php" ><input type="submit" name="you" value="You" class="bu2login"> </a>
+        <a href ="you.php" ><input type="submit" name="you" value="You" class="bu2login"> </a>
 </div>
 
 

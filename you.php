@@ -1,6 +1,6 @@
 <?php include('./navbar.php');
 session_start();
-$user=$_SESSION['user'];
+$nic=$_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ $user=$_SESSION['user'];
 <div class="divfirst" >
     <div class="div1moter">
         <?php
-        $sql= "SELECT * from vehicle_details where nic='$user'";
+        $sql= "SELECT * from vehicle_details where nic='$nic'";
         $res = mysqli_query($con,$sql);
         if(mysqli_num_rows($res)>0){
             while($span=mysqli_fetch_assoc($res)){

@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="allcss.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class ="bd" bgcolor ="gray"> 
+<body class ="bd" bgcolor ="white"> 
     <div class ="s">
     <strong> Find & Sell Your Vehicle </strong>
 </div>
