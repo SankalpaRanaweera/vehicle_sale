@@ -1,14 +1,20 @@
 
 
 .s{
+    background-color: rgb(173, 173, 247);
     width :100%;
     height :5%;
     background:transparent;
     font-size: 100px;
     margin:0;
     text-align: center;
+   
 }
-
+.h{
+    width: 200px;
+    height: 400px;
+    background-color:  rgb(173, 173, 247);
+}
 .img1 {
     width:100%;
     height:50%;
@@ -16,10 +22,7 @@
     margin-top:-10;
     
 }
-.bd {
-    margin:0;
- 
-}
+
 .hed {
 
 margin-top: -10;
