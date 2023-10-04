@@ -53,14 +53,14 @@ if(isset ($_POST['addnew'])){
     $sql = "INSERT INTO vehicle_details(contact,price,location,type,name,nic,milage,addimage) VALUES('$co','$pri','$loca','$type','$name','$nic','$mila','$addima')";
     $res = mysqli_query ($con,$sql);
     
-    // if(mysqli_num_rows ($res)>0){
+     if(mysqli_num_rows ($res)>0){
 
-    //     $_session ['user']=$nic;
-    //     header ('location:home.php');
-    // }
-    // else{
-    //     echo "failed to add vehicle details";
-    // }
+         $_session ['user']=$nic;
+         header ('location:home.php');
+     }
+     else{
+         echo "failed to add vehicle details";
+    }
     
 }
 

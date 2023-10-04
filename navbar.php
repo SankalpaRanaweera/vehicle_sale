@@ -12,7 +12,7 @@
 <body>
     
         <nav>
-            <div>
+            
                 <span class="span"> Vehicle Sale </span>
                 <ul>
                 <li> <a href ="home.php"> <button class="b2"> Home </button> </a> </li>
@@ -21,7 +21,7 @@
                 <li> <a href ="about.php"> <button class ="b2"> About </button> </a> </li>
                
 </ul>
-</div>
+
 </nav>
 
 
