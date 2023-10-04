@@ -234,7 +234,8 @@ ul {
     margin-top: 10px;
 }
 .div1moter{
-    display:inline-block;
+    display:flex;
+    flex-direction: row;
     
     font-size: 25px;
 }

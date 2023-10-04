@@ -1,7 +1,7 @@
 <?php
 include('./dbconnection.php');
 session_start();
-if(isset ($_POST['log'])){
+if(isset ($_POST['add'])){
     
     $n = mysqli_real_escape_string ($con,$_POST['name']);
     $pw = mysqli_real_escape_string ($con,$_POST['password']);
@@ -14,10 +14,29 @@ if(isset ($_POST['log'])){
     if(mysqli_num_rows ($res)>0){
 
         $_session ['user']=$un;
-        header ('location:home.php');
+        header ('location:addnew.php');
     }
     else{
         echo "failed to login";
+    }
+}
+if(isset ($_POST['update'])){
+    
+    $n = mysqli_real_escape_string ($con,$_POST['name']);
+    $pw = mysqli_real_escape_string ($con,$_POST['password']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+   
+
+    $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
+    $res = mysqli_query ($con,$sql);
+    
+    if(mysqli_num_rows ($res)>0){
+
+        $_session ['user']=$un;
+        header ('location:update.php');
+    }
+    else{
+        echo "failed to update";
     }
 }
 
@@ -31,17 +50,17 @@ if(isset ($_POST['addnew'])){
     $mila = mysqli_real_escape_string ($con,$_POST['milage']);
     $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
-    $sql = "INSERT INTO vehicle_details (contact,price,location,type,name,nic,milage,image) VALUES ('$co',$pri','$loca','$type','$name','$nic','$mila','$addima')";
+    $sql = "INSERT INTO vehicle_details(contact,price,location,type,name,nic,milage,addimage) VALUES('$co','$pri','$loca','$type','$name','$nic','$mila','$addima')";
     $res = mysqli_query ($con,$sql);
     
-    if(mysqli_num_rows ($res)>0){
+    // if(mysqli_num_rows ($res)>0){
 
-        $_session ['user']=$nic;
-        header ('location:home.php');
-    }
-    else{
-        echo "failed to add vehicle details";
-    }
+    //     $_session ['user']=$nic;
+    //     header ('location:home.php');
+    // }
+    // else{
+    //     echo "failed to add vehicle details";
+    // }
     
 }
 

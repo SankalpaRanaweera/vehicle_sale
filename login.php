@@ -27,10 +27,10 @@
 </div>
 
 <div class="divbu1login">
-        <a href ="addnew.php" ><input type="submit" name="log" value="Add" onclick="first2()" class="bu1login"> </a>
+        <a href ="addnew.php" ><input type="submit" name="add" value="Add" onclick="first2()" class="bu1login"> </a>
 </div>
 <div class="divbu2login">
-        <a href ="update.php" ><input type="submit" name="log" value="Update" onclick="first1()" class="bu2login"> </a>
+        <a href ="update.php" ><input type="submit" name="update" value="Update" onclick="first1()" class="bu2login"> </a>
 </div>
 </form>
 <div class="divbu2login">

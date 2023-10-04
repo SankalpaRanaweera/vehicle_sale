@@ -23,10 +23,12 @@
         echo "<div> <span> Type</span><strong> : </strong> '<span>'".$span['type']."'</span>';</div>";
         echo "<div><span> Name </span><strong> : </strong>'<span>'".$span['name']."'</span>';</div>";
         echo "<div><span> Milage </span><strong> : </strong>'<span>'".$span['milage']."'</span>';</div>";
+   echo"<a href=delete.php?nic=".$span['nic']."><input type='reset' name='delete' value='Delete' class='delete'></a>";
+
    echo" </div>";
-   echo"<input type='reset' name='delete' value='Delete' class='delete'>";
-   echo "</div>";
     }}?>
+   </div>
+
 </div>              
 </body>
 </html>
