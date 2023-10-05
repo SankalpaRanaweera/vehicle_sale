@@ -1,7 +1,7 @@
 <?php
 include('./dbconnection.php');
-$nic=$_GET['nic'];
-$sql = "DELETE FROM vehicle_details WHERE NIC='$nic'";
+$id=$_GET['id'];
+$sql = "DELETE FROM vehicle_details WHERE id='$id'";
 $res = mysqli_query($con,$sql);
 if($res) {
     header ('location:home.php');

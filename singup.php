@@ -12,7 +12,7 @@
     <span> Sing Up </span>
 </div>
 <div class="div2singup">
-    <from action="script.php" method="post">
+    <form action="script.php" method="post">
         <lable> Name </lable>
         <input type="text" name="name" class="tx1singup"><br>
         <lable> Password</lable>
@@ -23,9 +23,10 @@
         <input type="text" name="nic" class="tx4singup"><br>
         <lable>City</lable>
         <input type="text" name="city" class="tx5singup">
-</div>
+
 <div class="divbusingup">
-        <a href ="addnew.php"><input type="submit" name="singup" value="Register" onclick="second()" class="busingup"> </a>
+        <input type="submit" name="singup" value="Register" class="busingup"> 
+</div>
 </div>
 </form>
 <script>

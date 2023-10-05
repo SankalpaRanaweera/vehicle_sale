@@ -51,16 +51,11 @@ if(isset ($_POST['addnew'])){
     $addima = mysqli_real_escape_string ($con,$_POST['image']);
 
     $sql = "INSERT INTO vehicle_details(contact,price,location,type,name,nic,milage,addimage) VALUES('$co','$pri','$loca','$type','$name','$nic','$mila','$addima')";
-    $res = mysqli_query ($con,$sql);
-    
-     if(mysqli_num_rows ($res)>0){
-
-         $_session ['user']=$nic;
-         header ('location:home.php');
-     }
-     else{
-         echo "failed to add vehicle details";
+    if(mysqli_query ($con,$sql)){
+        header ('location:home.php');
+        
     }
+    
     
 }
 
@@ -95,18 +90,11 @@ if(isset ($_POST['singup'])){
     $nic = mysqli_real_escape_string ($con,$_POST['nic']);
     $c = mysqli_real_escape_string ($con,$_POST['city']);
 
-    $sql = "INSERT INTO user (name,password, telephone,nic) VALUES ('$n','$pw','$tel','$nic','$c')";
-    $res = mysqli_query ($con,$sql);
-    
-    if(mysqli_num_rows ($res)>0){
-
+    $sql = "INSERT INTO user (name,password, telephone,nic,city) VALUES ('$nm','$psw','$tel','$nic','$c')";
+    if(mysqli_query ($con,$sql)){
         $_session ['user']=$un;
-        header ('location:home.php');
-    }
-    else{
-        echo "failed to singup";
-    }
-    
+        header ('location:addnew.php');
+    }  
 }
 ?>
 

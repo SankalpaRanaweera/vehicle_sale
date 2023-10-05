@@ -27,7 +27,7 @@
 </div>
 
 <div class="divbu1login">
-        <a href ="addnew.php" ><input type="submit" name="add" value="Add" onclick="first2()" class="bu1login"> </a>
+        <input type="submit" name="add" value="Add" onclick="first2()" class="bu1login"> </a>
 </div>
 <div class="divbu2login">
         <a href ="update.php" ><input type="submit" name="update" value="Update" onclick="first1()" class="bu2login"> </a>
