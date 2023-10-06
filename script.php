@@ -9,16 +9,12 @@ if(isset ($_POST['add'])){
    
 
     $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
-    $res = mysqli_query ($con,$sql);
-    
-    if(mysqli_num_rows ($res)>0){
-
+    if( mysqli_query ($con,$sql)){
         $_session ['user']=$un;
         header ('location:addnew.php');
+
     }
-    else{
-        echo "failed to login";
-    }
+    
 }
 if(isset ($_POST['update'])){
     
@@ -28,16 +24,27 @@ if(isset ($_POST['update'])){
    
 
     $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
-    $res = mysqli_query ($con,$sql);
-    
-    if(mysqli_num_rows ($res)>0){
-
-        $_session ['user']=$un;
+    if(mysqli_query ($con,$sql)){
+        //$_session ['user']=$un;
         header ('location:update.php');
     }
     else{
-        echo "failed to update";
+        echo "create add first";
     }
+    
+}
+if(isset ($_POST['you'])){
+    
+    $n = mysqli_real_escape_string ($con,$_POST['name']);
+    $pw = mysqli_real_escape_string ($con,$_POST['password']);
+    $nic = mysqli_real_escape_string ($con,$_POST['nic']);
+   
+
+    $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
+    if(mysqli_query ($con,$sql)){
+       // $_session ['user']=$un;
+        header ('location:you.php');
+}
 }
 
 if(isset ($_POST['addnew'])){

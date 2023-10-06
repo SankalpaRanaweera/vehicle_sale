@@ -27,25 +27,15 @@
 </div>
 
 <div class="divbu1login">
-        <input type="submit" name="add" value="Add" onclick="first2()" class="bu1login"> </a>
+        <input type="submit" name="add" value="Add" class="bu1login"> 
 </div>
 <div class="divbu2login">
-        <a href ="update.php" ><input type="submit" name="update" value="Update" onclick="first1()" class="bu2login"> </a>
+        <input type="submit" name="update" value="Update" class="bu2login"> 
 </div>
 </form>
 <div class="divbu2login">
-        <a href ="you.php" ><input type="submit" name="you" value="You" class="bu2login"> </a>
+        <input type="submit" name="you" value="You" class="bu2login">
 </div>
-
-
-<script>
-    function first1(){
-        alert("login succesfull! add your vehicle details");
-    }
-    function first2(){
-        alert ("login succesfull! update your vehicle details");
-    }
-    </script>
 
 </body>
 </html>
