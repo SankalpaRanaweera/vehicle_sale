@@ -25,7 +25,7 @@ if(isset ($_POST['update'])){
 
     $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
     if(mysqli_query ($con,$sql)){
-        //$_session ['user']=$un;
+        $_session ['user']=$un;
         header ('location:update.php');
     }
     else{
@@ -42,7 +42,7 @@ if(isset ($_POST['you'])){
 
     $sql =  "SELECT * FROM user WHERE name='$n' AND password='$pw' AND nic='$nic'";
     if(mysqli_query ($con,$sql)){
-       // $_session ['user']=$un;
+        $_session ['user']=$un;
         header ('location:you.php');
 }
 }
