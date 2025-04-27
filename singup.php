@@ -29,11 +29,5 @@
 </div>
 </div>
 </form>
-<script>
-    function second(){
-        alert(" Registration succesfull! Now you can add your vehicle details")
-    }
-        </script>
-    
 </body>
 </html>
