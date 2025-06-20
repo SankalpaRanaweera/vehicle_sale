@@ -2,32 +2,129 @@
 
 .s{
     background-color: rgb(173, 173, 247);
-    width :100%;
-    height :5%;
+    width : 100vw;
+    height :100px;
     background:transparent;
     font-size: 100px;
-    margin:0;
     text-align: center;
    
 }
 .h{
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background-color:  rgb(173, 173, 247);
     display: flex;
+
 }
 .img1 {
-    width:100%;
-    height:600px;
-    padding: 0;
-    margin-top:-10;
+    width:100vw;
+    height:55vh;
+    margin-bottom: -10px;
+
     
+    
+}
+
+.hbd{
+     margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+
+}
+
+.lbd{
+     margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+
+}
+
+.sbd{
+     margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+
+}
+
+.abd{
+     margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+
+}
+
+.adbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+.busbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.carbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.lorrybd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.motorbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+.weelbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.vanbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.youbd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+.updatebd{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
 }
 
 a {text-decoration:none;}
 
 .b1{
-    margin-left: 100px;
+    margin-left: 65px;
     margin-top:20px;
     width :150px;
     height :50px;
@@ -38,12 +135,9 @@ a {text-decoration:none;}
 }
 nav {
     background-color: rgb(173, 173, 247);
-    width : 100%;
+    width : 100vw;
     height : 100px;
-    margin-top:0px;
-    margin-left:0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+
 }
 
 li {
@@ -62,20 +156,20 @@ ul {
 .b2{
     background-color: blue;
     font-size: 30px;
-    margin-right: 30px;
+    margin-right: 10px;
     
 }
 
 .span {
     font-size: 50px;
-    margin-right: 700px;
+    margin-right: 450px;
 
 }
 
  .logindiv1{
         color: black;
         font-size: 50px;
-        margin-top: 50px;
+        margin-top: 20px;
         text-align:center;
     }
     
@@ -83,7 +177,7 @@ ul {
     text-align: center;
     font-size: 50px;
     color:black;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .bu1login{
     font-size: 40px;
@@ -122,20 +216,20 @@ ul {
 .div1singup{
     color: black;
     font-size: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align:center;
 
 }
 .div2singup {
     font-size: 50px;
     color:black;
-    margin-top: 75px;
-    margin-left: 525px;
+    margin-top: 30px;
+    margin-left: 350px;
 
 }
 .divbusingup{
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 260px;
 }
 .busingup{
     font-size: 40px;
@@ -171,36 +265,36 @@ ul {
 .div1addnew{
     color: black;
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align:center;
 }
 .div2addnew{
     font-size: 40px;
     color:black;
-    margin-top: 50px;
-    margin-left: 500px;
+    margin-top: 40px;
+    margin-left: 300px;
 }
 .tx0addnew{
     width:300px;
     height:30px;
-    margin-left: 220px;
+    margin-left: 223px;
 }
 .tx1addnew{
     width:300px;
     height:30px;
-    margin-left: 263px;
+    margin-left: 266px;
 
 }
 .tx2addnew{
     width:300px;
     height:30px;
-    margin-left: 205px;
+    margin-left: 206px;
 
 }
 .tx3addnew{
     width:300px;
     height:30px;
-    margin-left: 280px;
+    margin-left: 269px;
 
 }
 .tx4addnew{
@@ -280,21 +374,21 @@ img{
     height:100px;
 }
 .div1abou{
-    font-size: 60px;
+    font-size: 35px;
     text-align: center;
 }
 
 .div2abou{
     
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 .div3abou{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .div4abou{
-    font-size: 50px;
+    font-size: 40px;
 }
 .delete{
     background-color: aqua;

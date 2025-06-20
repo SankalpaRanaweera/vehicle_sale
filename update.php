@@ -1,7 +1,7 @@
 <?php include('./navbar.php');
     session_start();
-   //$user =$_GET['nic'];
-   $nic=$_SESSION['user'];
+    $nic=$_SESSION['user'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,20 +11,19 @@
     <title>Document</title>
     <link href="allcss.css" rel="stylesheet" type="text/css"> 
 </head>
-<body bgcolor="gray">
+<body bgcolor="gray" class="updatebd">
     <div class="div1addnew">
         <span> Update Your Vehicle Details </span>
 </div>
 <div class="div2addnew">
-    <form action="script.php" method="post">
+    <form action="script.php" method="post" enctype="multipart/form-data">
         <?php
         
-       
         $sql="SELECT * FROM vehicle_details WHERE nic='$nic' ";
         $res = mysqli_query ($con,$sql);
         if(mysqli_num_rows($res)>0){
-            $row=mysqli_fetch_assoc($res);    //while($span=mysqli_fetch_assoc($res)){
-            ?>
+            $row=mysqli_fetch_assoc($res);   
+        ?>
         <lable> Contact</lable>
         <input type="text" name="contact" class="tx0addnew" value=<?php echo $row['contact'] ?> ><br>
         <lable> Price</lable>
@@ -40,10 +39,11 @@
         <lable>Milage</lable>
         <input type="text" name="milage" class="tx5addnew" value=<?php echo $row['milage'] ?> ><br>
         <lable>Add Image</lable>
-        <input type="file" name="image" class="tx6addnew" value=<?php echo $row['image'] ?> >
+        <input type="file" name="addimage" class="tx6addnew" value=<?php echo $_FILES['addimage'] ?> >
         <div class="divbuaddnew">
         <input type="submit" name="upload" class="buaddnew" >
     </div>
+
     <?php
         }
         ?>

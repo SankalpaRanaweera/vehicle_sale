@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="allcss.css" rel="stylesheet" type="text/css">
 </head>
-<body bgcolor="gray">
+<body bgcolor="gray" class="sbd">
     <div class ="div1singup">
     <span> Sing Up </span>
 </div>

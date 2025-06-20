@@ -1,4 +1,6 @@
-<?php include('./navbar.php'); ?>
+<?php include('./navbar.php'); 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,7 @@
     <title>Document</title>
     <link href="allcss.css" rel="stylesheet" type="text/css"/>
 </head>
-<body bgcolor="gray">
+<body bgcolor="gray" class="lbd">
 <div class="logindiv1">
         <span> Login </span>
 </div>
@@ -21,8 +23,8 @@
         <lable>NIC</lable>
         <input type ="text" name="nic" class="tx3login">  
         <?
-        session_start();
-    $_SESSION['user']= nic; 
+        
+    $_SESSION['user']= $nic; 
     ?>
 </div>
 
@@ -32,11 +34,11 @@
 <div class="divbu2login">
         <input type="submit" name="update" value="Update" class="bu2login"> 
 </div>
-</form>
+
 <div class="divbu2login">
         <input type="submit" name="you" value="You" class="bu2login">
 </div>
-
+</form>
 </body>
 </html>
 

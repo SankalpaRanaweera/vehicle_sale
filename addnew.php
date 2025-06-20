@@ -7,12 +7,12 @@
     <title>Document</title>
     <link href="allcss.css" rel="stylesheet"  type="text/css">
 </head>
-<body bgcolor="gray">
+<body bgcolor="gray" class="adbd">
     <div class="div1addnew">
         <span> Add Your Vehicle Details </span>
 </div>
 <div class="div2addnew">
-    <form action="script.php" method="post">
+    <form action="script.php" method="post" enctype="multipart/form-data">
         <lable> Contact</lable>
         <input type="text" name="contact" class="tx0addnew"><br>
         <lable> Price</lable>
@@ -28,7 +28,7 @@
         <lable>Milage</lable>
         <input type="text" name="milage" class="tx5addnew"><br>
         <lable>Add Image</lable>
-        <input type="file" name="image" class="tx6addnew">
+        <input type="file" name="addimage" class="tx6addnew">
         <div class="divbuaddnew">
         <a href= "home.php"><input type="submit" name="addnew"  value="Submit" class="buaddnew"></a>
     </div>
